@@ -5,9 +5,9 @@ androidx-activityCompose = "1.9.1"
 compose = "1.6.8"
 compose-plugin = "1.7.0-alpha02"
 
-koin = "3.5.6"
+koin-version = "4.0.0"
 koin-annotations = "1.3.1"
-koin-compose = "1.2.0-alpha3"
+koin-compose = "4.0.0"
 buildKonfig = "0.15.1"
 ktor = "2.3.12"
 kotlinx-coroutines = "1.8.1"
@@ -17,11 +17,22 @@ colorMath = "3.4.0"
 windowSize = "0.5.0"
 detekt = "1.23.5"
 ksp-version = "2.0.20-1.0.25"
-compose-navigation = "2.8.0-alpha08"
+jetbrains-androidx-compose-navigation = "2.8.0-alpha10"
 
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp_version" }
+androidLibrary = { id = "com.android.library", version.ref = "agp_version" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin_version" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }
+buildKonfigPlugin = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin_version" }
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin_version" }
@@ -32,9 +43,9 @@ co-touchlab-stately-common = { module = "co.touchlab:stately-common", version.re
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 window-size = { module = "dev.chrisbanes.material3:material3-window-size-class-multiplatform", version.ref = "windowSize" }
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose" }
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-version" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-version" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-version" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
@@ -49,15 +60,5 @@ colorMath = { module = "com.github.ajalt.colormath:colormath-ext-jetpack-compose
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coilKtor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
 coilCompose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+jetbrains-androidx-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "jetbrains-androidx-compose-navigation" }
 
-[plugins]
-androidApplication = { id = "com.android.application", version.ref = "agp_version" }
-androidLibrary = { id = "com.android.library", version.ref = "agp_version" }
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin_version" }
-kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }
-buildKonfigPlugin = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
-composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin_version" }
