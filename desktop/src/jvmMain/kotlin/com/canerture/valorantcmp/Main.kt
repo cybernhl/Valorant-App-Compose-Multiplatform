@@ -6,7 +6,8 @@ import androidx.compose.ui.window.WindowPlacement
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
-import com.canerture.valorantcmp.di.initKoin
+import com.canerture.common.App
+import com.canerture.common.di.initKoin
 import java.awt.Dimension
 
 private const val WINDOW_WIDTH = 1280

@@ -105,7 +105,7 @@ ksp {
 }
 
 android {
-    namespace = "com.canerture.valorantcmp"
+    namespace = "com.canerture.common"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     sourceSets["main"].apply {
@@ -138,7 +138,7 @@ android {
 }
 
 buildkonfig {
-    packageName = "com.canerture.valorantcmp"
+    packageName = "com.canerture.common"
 
     val localProperties = Properties().apply {
         val propsFile = rootProject.file("local.properties")
@@ -162,4 +162,10 @@ detekt {
     parallel = true
     autoCorrect = true
     buildUponDefaultConfig = true
+}
+
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "com.canerture.common"
+    generateResClass = always
 }
