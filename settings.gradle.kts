@@ -17,4 +17,5 @@ dependencyResolutionManagement {
     }
 }
 include(":common")
-project(":common").projectDir = file("./common")
+include(":android")
+include(":desktop")

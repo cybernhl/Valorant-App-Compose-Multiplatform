@@ -45,5 +45,5 @@ val screenModelsModule = module {
     factoryOf(::WeaponsViewModel)
     factoryOf(::WeaponDetailViewModel)
 }
-
-fun initKoin() = startKoin { modules(dataModule, useCaseModule, screenModelsModule) }
+//FIXME Cannot access class 'org.koin.core.KoinApplication'. Check your module classpath for missing or conflicting dependencies.
+fun initKoin() : Any = startKoin { modules(dataModule, useCaseModule, screenModelsModule) }

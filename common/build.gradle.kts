@@ -4,7 +4,7 @@ import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.buildKonfigPlugin)
@@ -115,11 +115,8 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.canerture.valorantcmp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
     }
     packaging {
         resources {
@@ -137,18 +134,6 @@ android {
     }
     dependencies {
         debugImplementation(libs.androidx.compose.ui.tooling)
-    }
-}
-
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.canerture.valorantcmp"
-            packageVersion = "1.0.0"
-        }
     }
 }
 
