@@ -1,14 +1,19 @@
-import SwiftUI
+import UIKit
 import common
 
-@main
-struct iOSApp: App {
-    init() {
-        ModulesKt.doInitKoin()
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    override init(){
+       ModulesKt.doInitKoin()
     }
-	var body: some Scene {
-		WindowGroup {
-			ContentView()
-		}
-	}
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainViewController = MainViewControllerKt.MainViewController()
+        window?.rootViewController = mainViewController
+        window?.makeKeyAndVisible()
+        return true
+    }
 }
