@@ -15,8 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.progress_bar_animation
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.progress_bar_animation
 
 private const val DURATION = 1000
 

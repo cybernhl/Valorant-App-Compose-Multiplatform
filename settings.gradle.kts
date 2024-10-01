@@ -16,4 +16,5 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
-include(":composeApp")
+include(":common")
+project(":common").projectDir = file("./common")

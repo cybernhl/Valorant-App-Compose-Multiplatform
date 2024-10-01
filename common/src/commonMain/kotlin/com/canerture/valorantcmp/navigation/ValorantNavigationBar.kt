@@ -14,11 +14,11 @@ import com.canerture.valorantcmp.common.Routes
 import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.ic_agents
-import valorantcmp.composeapp.generated.resources.ic_maps
-import valorantcmp.composeapp.generated.resources.ic_tiers
-import valorantcmp.composeapp.generated.resources.ic_weapons
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.ic_agents
+import valorantcmp.common.generated.resources.ic_maps
+import valorantcmp.common.generated.resources.ic_tiers
+import valorantcmp.common.generated.resources.ic_weapons
 
 data class NavItem(
     val route: String,

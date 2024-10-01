@@ -16,8 +16,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
 import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.desc_warning_image
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.desc_warning_image
 
 private const val ASPECT_RATIO = 3 / 2f
 

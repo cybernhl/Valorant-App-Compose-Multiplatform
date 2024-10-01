@@ -38,9 +38,9 @@ import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import com.canerture.valorantcmp.presentation.theme.WindowType
 import kotlinx.coroutines.flow.Flow
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.title_abilities
-import valorantcmp.composeapp.generated.resources.title_description
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.title_abilities
+import valorantcmp.common.generated.resources.title_description
 
 private const val ASPECT_RATIO = 16 / 9f
 private const val ASPECT_RATIO_MOBILE = 3 / 2f

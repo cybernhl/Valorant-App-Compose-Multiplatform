@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.desc_back_icon
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.desc_back_icon
 
 @Composable
 fun ValorantBackIcon(

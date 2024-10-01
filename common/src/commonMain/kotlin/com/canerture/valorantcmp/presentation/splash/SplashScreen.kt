@@ -15,9 +15,9 @@ import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.desc_valorant_logo
-import valorantcmp.composeapp.generated.resources.ic_valorant
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.desc_valorant_logo
+import valorantcmp.common.generated.resources.ic_valorant
 
 private const val DELAY = 2000L
 

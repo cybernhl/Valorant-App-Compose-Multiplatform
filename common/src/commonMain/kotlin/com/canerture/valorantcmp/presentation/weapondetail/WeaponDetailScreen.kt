@@ -32,12 +32,12 @@ import com.canerture.valorantcmp.presentation.components.ValorantText
 import com.canerture.valorantcmp.presentation.theme.ValorantTheme
 import kotlinx.coroutines.flow.Flow
 import org.jetbrains.compose.resources.stringResource
-import valorantcmp.composeapp.generated.resources.Res
-import valorantcmp.composeapp.generated.resources.text_body
-import valorantcmp.composeapp.generated.resources.text_head
-import valorantcmp.composeapp.generated.resources.text_leg
-import valorantcmp.composeapp.generated.resources.title_damage_range
-import valorantcmp.composeapp.generated.resources.title_skins
+import valorantcmp.common.generated.resources.Res
+import valorantcmp.common.generated.resources.text_body
+import valorantcmp.common.generated.resources.text_head
+import valorantcmp.common.generated.resources.text_leg
+import valorantcmp.common.generated.resources.title_damage_range
+import valorantcmp.common.generated.resources.title_skins
 
 @Composable
 fun WeaponDetailScreen(
