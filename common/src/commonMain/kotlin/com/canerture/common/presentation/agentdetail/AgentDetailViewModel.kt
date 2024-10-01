@@ -10,7 +10,7 @@ import com.canerture.common.presentation.agentdetail.AgentDetailContract.UiEffec
 import com.canerture.common.presentation.agentdetail.AgentDetailContract.UiState
 import kotlinx.coroutines.launch
 
-class AgentDetailViewModel(
+public class AgentDetailViewModel(
     private val getAgentDetailUseCase: GetAgentDetailUseCase,
 ) : ViewModel(), MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
 
@@ -22,7 +22,7 @@ class AgentDetailViewModel(
         }
     }
 
-    fun getAgentDetail(id: String) {
+    public fun getAgentDetail(id: String) {
         viewModelScope.launch {
             updateUiState { copy(isLoading = true) }
             getAgentDetailUseCase(id).onSuccess {

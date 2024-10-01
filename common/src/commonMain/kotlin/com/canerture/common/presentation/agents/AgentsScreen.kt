@@ -36,7 +36,7 @@ import com.canerture.common.presentation.theme.WindowType
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun AgentsScreen(
+public fun AgentsScreen(
     uiState: AgentsContract.UiState,
     uiEffect: Flow<AgentsContract.UiEffect>,
     onAction: (AgentsContract.UiAction) -> Unit,
@@ -79,7 +79,7 @@ fun AgentsScreen(
 }
 
 @Composable
-fun AgentListMobileContent(
+public fun AgentListMobileContent(
     agents: List<AgentGroupUI>,
     pagerPadding: Dp,
     onAgentClick: (String) -> Unit
@@ -128,7 +128,7 @@ fun AgentListMobileContent(
 }
 
 @Composable
-fun AgentListDesktopContent(
+public fun AgentListDesktopContent(
     agents: List<AgentGroupUI>,
     onAgentClick: (String) -> Unit
 ) {

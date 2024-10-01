@@ -5,7 +5,7 @@ import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 
 @Composable
-fun rememberWindowType(): WindowType {
+public fun rememberWindowType(): WindowType {
     val type = calculateWindowSizeClass().widthSizeClass
     return if (type <= WindowWidthSizeClass.Compact) {
         WindowType.Small
@@ -16,6 +16,6 @@ fun rememberWindowType(): WindowType {
     }
 }
 
-enum class WindowType {
+public enum class WindowType {
     Small, Medium, Large
 }

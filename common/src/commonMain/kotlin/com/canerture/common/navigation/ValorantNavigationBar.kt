@@ -10,24 +10,24 @@ import androidx.compose.runtime.getValue
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.canerture.common.common.Routes
-import com.canerture.common.presentation.theme.ValorantTheme
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.painterResource
 import com.canerture.common.Res
+import com.canerture.common.common.Routes
 import com.canerture.common.ic_agents
 import com.canerture.common.ic_maps
 import com.canerture.common.ic_tiers
 import com.canerture.common.ic_weapons
+import com.canerture.common.presentation.theme.ValorantTheme
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.painterResource
 
-data class NavItem(
+public data class NavItem(
     val route: String,
     val title: String,
     val icon: DrawableResource
 )
 
 @Composable
-fun ValorantNavigationBar(
+public fun ValorantNavigationBar(
     navController: NavController,
 ) {
     val tabList = listOf(

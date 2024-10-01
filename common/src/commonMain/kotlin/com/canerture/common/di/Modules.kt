@@ -17,16 +17,18 @@ import com.canerture.common.presentation.maps.MapsViewModel
 import com.canerture.common.presentation.tiers.TiersViewModel
 import com.canerture.common.presentation.weapondetail.WeaponDetailViewModel
 import com.canerture.common.presentation.weapons.WeaponsViewModel
+import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
+import org.koin.core.module.Module
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 
-val dataModule = module {
+public val dataModule: Module = module {
     single<ValorantService> { ValorantService() }
     single<ValorantRepository> { ValorantRepositoryImpl(get()) }
 }
 
-val useCaseModule = module {
+public val useCaseModule : Module = module {
     factoryOf(::GetAgentsUseCase)
     factoryOf(::GetAgentDetailUseCase)
     factoryOf(::GetTiersUseCase)
@@ -36,7 +38,7 @@ val useCaseModule = module {
     factoryOf(::GetWeaponDetailUseCase)
 }
 
-val screenModelsModule = module {
+public val screenModelsModule : Module =  module {
     factoryOf(::AgentsViewModel)
     factoryOf(::AgentDetailViewModel)
     factoryOf(::TiersViewModel)
@@ -45,5 +47,5 @@ val screenModelsModule = module {
     factoryOf(::WeaponsViewModel)
     factoryOf(::WeaponDetailViewModel)
 }
-//FIXME Cannot access class 'org.koin.core.KoinApplication'. Check your module classpath for missing or conflicting dependencies.
-fun initKoin() : Any = startKoin { modules(dataModule, useCaseModule, screenModelsModule) }
+
+public fun initKoin(): Any = startKoin { modules(dataModule, useCaseModule, screenModelsModule) }

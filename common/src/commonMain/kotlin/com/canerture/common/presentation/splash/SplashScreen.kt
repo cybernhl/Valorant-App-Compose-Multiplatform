@@ -11,18 +11,18 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.canerture.common.Res
+import com.canerture.common.desc_valorant_logo
+import com.canerture.common.ic_valorant
 import com.canerture.common.presentation.theme.ValorantTheme
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import com.canerture.common.Res
-import com.canerture.common.desc_valorant_logo
-import com.canerture.common.ic_valorant
 
 private const val DELAY = 2000L
 
 @Composable
-fun SplashScreen(
+public fun SplashScreen(
     onNavigateAgentsScreen: () -> Unit
 ) {
     Box(

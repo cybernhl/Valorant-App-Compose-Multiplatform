@@ -1,6 +1,6 @@
 package com.canerture.common.domain.model
 
-data class MapUI(
+public data class MapUI(
     val coordinates: String,
     val displayIcon: String,
     val displayName: String,

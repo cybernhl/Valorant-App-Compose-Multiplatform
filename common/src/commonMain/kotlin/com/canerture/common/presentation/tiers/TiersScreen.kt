@@ -12,7 +12,7 @@ import com.canerture.common.presentation.components.ValorantProgressBar
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun TiersScreen(
+public fun TiersScreen(
     uiState: TiersContract.UiState,
     uiEffect: Flow<TiersContract.UiEffect>,
 ) {
@@ -32,7 +32,7 @@ fun TiersScreen(
 }
 
 @Composable
-fun TierListContent(
+public fun TierListContent(
     tiers: List<TierUI>
 ) {
     LazyVerticalGrid(

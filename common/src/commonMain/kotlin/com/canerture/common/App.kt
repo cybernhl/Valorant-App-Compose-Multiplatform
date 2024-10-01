@@ -24,7 +24,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun App() {
+internal fun App() {
     ValorantTheme {
         val windowType = LocalWindowType.current
         val navController = rememberNavController()
@@ -56,5 +56,3 @@ fun App() {
         }
     }
 }
-
-

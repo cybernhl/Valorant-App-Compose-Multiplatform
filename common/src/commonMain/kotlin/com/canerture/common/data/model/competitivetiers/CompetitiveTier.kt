@@ -3,6 +3,6 @@ package com.canerture.common.data.model.competitivetiers
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CompetitiveTier(
+public data class CompetitiveTier(
     val tiers: List<Tier>?,
 )

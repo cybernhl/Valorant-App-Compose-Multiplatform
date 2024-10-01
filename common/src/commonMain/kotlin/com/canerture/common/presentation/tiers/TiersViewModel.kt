@@ -9,11 +9,11 @@ import com.canerture.common.presentation.tiers.TiersContract.UiEffect
 import com.canerture.common.presentation.tiers.TiersContract.UiState
 import kotlinx.coroutines.launch
 
-class TiersViewModel(
+public class TiersViewModel(
     private val getTiersUseCase: GetTiersUseCase
 ) : ViewModel(), MVI<UiState, Unit, UiEffect> by mvi(UiState()) {
 
-    fun getTiers() {
+    public    fun getTiers() {
         viewModelScope.launch {
             updateUiState { copy(isLoading = true) }
             getTiersUseCase().onSuccess { list ->

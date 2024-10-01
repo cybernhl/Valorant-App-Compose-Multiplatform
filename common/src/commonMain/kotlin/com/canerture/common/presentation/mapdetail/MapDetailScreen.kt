@@ -24,7 +24,7 @@ import com.canerture.common.presentation.theme.ValorantTheme
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun MapDetailScreen(
+public fun MapDetailScreen(
     uiState: MapDetailContract.UiState,
     uiEffect: Flow<MapDetailContract.UiEffect>,
     onAction: (MapDetailContract.UiAction) -> Unit,
@@ -54,7 +54,7 @@ fun MapDetailScreen(
 }
 
 @Composable
-fun MapDetailContent(
+public fun MapDetailContent(
     map: MapUI,
     onBackClick: () -> Unit
 ) {

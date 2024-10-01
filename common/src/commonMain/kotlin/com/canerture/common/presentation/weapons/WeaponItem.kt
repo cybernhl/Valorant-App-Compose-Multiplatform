@@ -19,7 +19,7 @@ import com.canerture.common.presentation.theme.ValorantTheme
 private const val ASPECT_RATIO = 16 / 9f
 
 @Composable
-fun WeaponItem(
+public fun WeaponItem(
     weapon: WeaponUI,
     onWeaponClick: (String) -> Unit
 ) {

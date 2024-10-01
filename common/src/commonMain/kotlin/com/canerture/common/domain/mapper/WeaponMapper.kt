@@ -9,7 +9,7 @@ import com.canerture.common.domain.model.SkinUI
 import com.canerture.common.domain.model.WeaponStatsUI
 import com.canerture.common.domain.model.WeaponUI
 
-fun List<Weapon>?.mapToWeaponUI() = this?.map {
+public fun List<Weapon>?.mapToWeaponUI(): List<WeaponUI> = this?.map {
     WeaponUI(
         category = it.category.orEmpty().replace("EEquippableCategory::", ""),
         displayIcon = it.displayIcon.orEmpty(),
@@ -20,7 +20,7 @@ fun List<Weapon>?.mapToWeaponUI() = this?.map {
     )
 }.orEmpty()
 
-fun Weapon?.mapToWeaponUI() = WeaponUI(
+public fun Weapon?.mapToWeaponUI(): WeaponUI = WeaponUI(
     category = this?.category.orEmpty().replace("EEquippableCategory::", ""),
     displayIcon = this?.displayIcon.orEmpty(),
     displayName = this?.displayName.orEmpty(),
@@ -29,18 +29,18 @@ fun Weapon?.mapToWeaponUI() = WeaponUI(
     weaponStats = this?.weaponStats.mapToWeaponStatsUI()
 )
 
-fun WeaponStats?.mapToWeaponStatsUI() = WeaponStatsUI(
+public fun WeaponStats?.mapToWeaponStatsUI(): WeaponStatsUI = WeaponStatsUI(
     damageRanges = this?.damageRanges.mapToDamageRangeUI(),
 )
 
-fun List<Skin>?.mapToSkinUI() = this?.map {
+public fun List<Skin>?.mapToSkinUI(): List<SkinUI> = this?.map {
     SkinUI(
         displayIcon = it.displayIcon.orEmpty(),
         displayName = it.displayName.orEmpty(),
     )
 }.orEmpty().filter { it.displayIcon.isNotEmpty() }
 
-fun List<DamageRange>?.mapToDamageRangeUI() = this?.map {
+public fun List<DamageRange>?.mapToDamageRangeUI(): List<DamageRangeUI> = this?.map {
     DamageRangeUI(
         rangeStartMeters = it.rangeStartMeters ?: 0,
         rangeEndMeters = it.rangeEndMeters ?: 0,

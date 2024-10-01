@@ -9,8 +9,8 @@ import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-abstract class KtorApi {
-    val client = HttpClient {
+public abstract class KtorApi {
+    public val client: HttpClient = HttpClient {
         defaultRequest {
             contentType(ContentType.Application.Json)
             accept(ContentType.Application.Json)

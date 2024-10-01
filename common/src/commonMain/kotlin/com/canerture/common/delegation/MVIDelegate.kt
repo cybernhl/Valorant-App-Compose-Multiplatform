@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 
-class MVIDelegate<UiState, UiAction, UiEffect>(initialUiState: UiState) :
+public class MVIDelegate<UiState, UiAction, UiEffect>(initialUiState: UiState) :
     MVI<UiState, UiAction, UiEffect> {
 
     private val _uiState = MutableStateFlow(initialUiState)
@@ -17,7 +17,7 @@ class MVIDelegate<UiState, UiAction, UiEffect>(initialUiState: UiState) :
     private val _uiEffect by lazy { Channel<UiEffect>() }
     override val uiEffect: Flow<UiEffect> by lazy { _uiEffect.receiveAsFlow() }
 
-    override fun onAction(uiAction: UiAction) = Unit
+    override fun onAction(uiAction: UiAction): Unit = Unit
 
     override fun updateUiState(block: UiState.() -> UiState) {
         _uiState.update(block)

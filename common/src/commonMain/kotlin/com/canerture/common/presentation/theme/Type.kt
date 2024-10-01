@@ -7,9 +7,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.canerture.common.presentation.theme.ValorantTheme
 
-class ValorantTypography {
+public class ValorantTypography {
 
-    val titleLarge: TextStyle
+    public val titleLarge: TextStyle
         @Composable
         get() = TextStyle(
             fontSize = 34.sp,
@@ -18,7 +18,7 @@ class ValorantTypography {
             textAlign = TextAlign.Center
         )
 
-    val titleMedium: TextStyle
+    public val titleMedium: TextStyle
         @Composable
         get() = TextStyle(
             fontSize = 24.sp,
@@ -27,7 +27,7 @@ class ValorantTypography {
             textAlign = TextAlign.Center
         )
 
-    val titleNormal: TextStyle
+    public val titleNormal: TextStyle
         @Composable
         get() = TextStyle(
             fontSize = 18.sp,
@@ -36,7 +36,7 @@ class ValorantTypography {
             textAlign = TextAlign.Center
         )
 
-    val titleSmall: TextStyle
+    public val titleSmall: TextStyle
         @Composable
         get() = TextStyle(
             fontSize = 14.sp,
@@ -45,7 +45,7 @@ class ValorantTypography {
             textAlign = TextAlign.Center
         )
 
-    val bodySmall: TextStyle
+    public val bodySmall: TextStyle
         @Composable
         get() = TextStyle(
             fontSize = 14.sp,

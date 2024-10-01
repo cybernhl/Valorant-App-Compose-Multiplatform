@@ -13,15 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.canerture.common.presentation.theme.ValorantTheme
-import org.jetbrains.compose.resources.stringResource
 import com.canerture.common.Res
 import com.canerture.common.progress_bar_animation
+import com.canerture.common.presentation.theme.ValorantTheme
+import org.jetbrains.compose.resources.stringResource
 
 private const val DURATION = 1000
 
 @Composable
-fun ValorantProgressBar() {
+public fun ValorantProgressBar() {
     val infiniteTransition = rememberInfiniteTransition(
         label = stringResource(Res.string.progress_bar_animation)
     )

@@ -3,13 +3,13 @@ package com.canerture.common.presentation.theme
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
-val Blue = Color(0xFF161C23)
-val LightBlue = Color(0xFF212830)
-val Red = Color(0xFFFF4654)
-val White = Color(0xFFFFFDF1)
+public val Blue: Color = Color(0xFF161C23)
+public val LightBlue: Color = Color(0xFF212830)
+public val Red: Color = Color(0xFFFF4654)
+public val White: Color = Color(0xFFFFFDF1)
 
 @Immutable
-data class ValorantColors(
+public data class ValorantColors(
     val primary: Color,
     val secondary: Color,
     val background: Color,
@@ -23,7 +23,7 @@ data class ValorantColors(
 )
 
 @Immutable
-data class NavColors(
+public data class NavColors(
     val containerColor: Color,
     val selectedIconColor: Color,
     val selectedTextColor: Color,

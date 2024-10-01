@@ -28,11 +28,11 @@ import com.github.ajalt.colormath.parse
 import kotlinx.coroutines.flow.Flow
 import kotlin.math.absoluteValue
 
-fun colorParse(color: String): Color {
+public fun colorParse(color: String): Color {
     return com.github.ajalt.colormath.Color.parse("#$color").toComposeColor()
 }
 
-fun com.github.ajalt.colormath.Color.toComposeColor(): Color {
+public fun com.github.ajalt.colormath.Color.toComposeColor(): Color {
     return if (this is RGBInt) {
         Color(argb.toInt())
     } else {
@@ -62,7 +62,7 @@ fun com.github.ajalt.colormath.Color.toComposeColor(): Color {
     }
 }
 
-fun Modifier.carouselTransition(page: Int, pagerState: PagerState) =
+public fun Modifier.carouselTransition(page: Int, pagerState: PagerState): Modifier =
     graphicsLayer {
         val pageOffset = ((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction).absoluteValue
         val transformation = lerp(start = 0.9f, stop = 1f, fraction = 1f - pageOffset.coerceIn(0f, 1f))
@@ -71,7 +71,7 @@ fun Modifier.carouselTransition(page: Int, pagerState: PagerState) =
     }
 
 @Composable
-fun <T> Flow<T>.collectWithLifecycle(
+public fun <T> Flow<T>.collectWithLifecycle(
     collect: suspend (T) -> Unit
 ) {
     val lifecycleOwner = LocalLifecycleOwner.current

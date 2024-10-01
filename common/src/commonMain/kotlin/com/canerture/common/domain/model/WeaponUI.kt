@@ -1,6 +1,6 @@
 package com.canerture.common.domain.model
 
-data class WeaponUI(
+public data class WeaponUI(
     val category: String,
     val displayIcon: String,
     val displayName: String,
@@ -9,16 +9,16 @@ data class WeaponUI(
     val weaponStats: WeaponStatsUI
 )
 
-data class SkinUI(
+public data class SkinUI(
     val displayIcon: String,
     val displayName: String,
 )
 
-data class WeaponStatsUI(
+public data class WeaponStatsUI(
     val damageRanges: List<DamageRangeUI>,
 )
 
-data class DamageRangeUI(
+public data class DamageRangeUI(
     val rangeStartMeters: Int,
     val rangeEndMeters: Int,
     val bodyDamage: Double,

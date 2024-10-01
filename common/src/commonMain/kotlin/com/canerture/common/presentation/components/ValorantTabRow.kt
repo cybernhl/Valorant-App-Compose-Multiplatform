@@ -22,9 +22,9 @@ import com.canerture.common.common.NoRippleInteractionSource
 import com.canerture.common.presentation.theme.ValorantTheme
 import kotlinx.coroutines.launch
 
-object ValorantTabRow {
+public object ValorantTabRow {
     @Composable
-    fun <T> Icon(
+    public fun <T> Icon(
         items: List<T>,
         pagerState: PagerState,
         image: (T) -> String,
@@ -42,8 +42,10 @@ object ValorantTabRow {
             divider = {},
         ) {
             items.forEachIndexed { index, item ->
-                val textColor = if (pagerState.currentPage == index) iconColors.first else iconColors.second
-                val backgroundColor = if (pagerState.currentPage == index) bgColors.first else bgColors.second
+                val textColor =
+                    if (pagerState.currentPage == index) iconColors.first else iconColors.second
+                val backgroundColor =
+                    if (pagerState.currentPage == index) bgColors.first else bgColors.second
                 Tab(
                     icon = {
                         ValorantImage(
@@ -86,7 +88,7 @@ object ValorantTabRow {
     }
 
     @Composable
-    fun <T> Text(
+    public fun <T> Text(
         items: List<T>,
         pagerState: PagerState,
         text: (T) -> String,
@@ -103,8 +105,10 @@ object ValorantTabRow {
             divider = {},
         ) {
             items.forEachIndexed { index, item ->
-                val textColor = if (pagerState.currentPage == index) textColors.first else textColors.second
-                val backgroundColor = if (pagerState.currentPage == index) bgColors.first else bgColors.second
+                val textColor =
+                    if (pagerState.currentPage == index) textColors.first else textColors.second
+                val backgroundColor =
+                    if (pagerState.currentPage == index) bgColors.first else bgColors.second
                 Tab(
                     text = {
                         ValorantText(
@@ -144,7 +148,7 @@ object ValorantTabRow {
     }
 
     @Composable
-    fun <T> Scrollable(
+    public fun <T> Scrollable(
         items: List<T>,
         pagerState: PagerState,
         image: (T) -> String,
@@ -162,7 +166,8 @@ object ValorantTabRow {
             divider = {},
         ) {
             items.forEachIndexed { index, item ->
-                val backgroundColor = if (pagerState.currentPage == index) bgColors.first else bgColors.second
+                val backgroundColor =
+                    if (pagerState.currentPage == index) bgColors.first else bgColors.second
                 Tab(
                     modifier = Modifier
                         .padding(horizontal = 12.dp, vertical = 8.dp)

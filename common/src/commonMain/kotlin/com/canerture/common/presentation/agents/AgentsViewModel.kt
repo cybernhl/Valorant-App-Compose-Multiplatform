@@ -10,7 +10,7 @@ import com.canerture.common.presentation.agents.AgentsContract.UiEffect
 import com.canerture.common.presentation.agents.AgentsContract.UiState
 import kotlinx.coroutines.launch
 
-class AgentsViewModel(
+public class AgentsViewModel(
     private val getAgentsUseCase: GetAgentsUseCase
 ) : ViewModel(), MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
 
@@ -22,7 +22,7 @@ class AgentsViewModel(
         }
     }
 
-    fun getAgents() {
+    public fun getAgents() {
         viewModelScope.launch {
             updateUiState { copy(isLoading = true) }
             getAgentsUseCase().onSuccess {

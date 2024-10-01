@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Weapon(
+public data class Weapon(
     val category: String?,
     val displayIcon: String?,
     val displayName: String?,

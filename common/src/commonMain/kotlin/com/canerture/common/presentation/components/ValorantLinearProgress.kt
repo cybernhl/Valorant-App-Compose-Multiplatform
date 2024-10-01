@@ -22,7 +22,7 @@ import com.canerture.common.presentation.theme.ValorantTheme
 private const val DIV = 150
 
 @Composable
-fun LinearProgress(header: String, progress: Double, progressString: String) {
+public fun LinearProgress(header: String, progress: Double, progressString: String) {
     val animatedProgress = animateFloatAsState(
         targetValue = progress.div(DIV).toFloat(),
         animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec

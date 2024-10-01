@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Agent(
+public data class Agent(
     val abilities: List<Ability>?,
     val description: String?,
     val displayName: String?,

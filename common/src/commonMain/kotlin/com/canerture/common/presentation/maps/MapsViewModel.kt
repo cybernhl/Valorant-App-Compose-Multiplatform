@@ -10,7 +10,7 @@ import com.canerture.common.presentation.maps.MapsContract.UiEffect
 import com.canerture.common.presentation.maps.MapsContract.UiState
 import kotlinx.coroutines.launch
 
-class MapsViewModel(
+public class MapsViewModel(
     private val getMapsUseCase: GetMapsUseCase
 ) : ViewModel(), MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
 
@@ -22,7 +22,7 @@ class MapsViewModel(
         }
     }
 
-    fun getMaps() {
+    public fun getMaps() {
         viewModelScope.launch {
             updateUiState { copy(isLoading = true) }
             getMapsUseCase().onSuccess {

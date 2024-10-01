@@ -12,7 +12,7 @@ import com.canerture.common.presentation.components.ValorantProgressBar
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun WeaponsScreen(
+public fun WeaponsScreen(
     uiState: WeaponsContract.UiState,
     uiEffect: Flow<WeaponsContract.UiEffect>,
     onAction: (WeaponsContract.UiAction) -> Unit,
@@ -41,7 +41,7 @@ fun WeaponsScreen(
 }
 
 @Composable
-fun WeaponListContent(
+public fun WeaponListContent(
     weapons: List<WeaponUI>,
     onWeaponClick: (String) -> Unit
 ) {

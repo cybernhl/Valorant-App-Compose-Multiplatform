@@ -12,13 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.canerture.common.presentation.theme.ValorantTheme
-import org.jetbrains.compose.resources.stringResource
 import com.canerture.common.Res
 import com.canerture.common.desc_back_icon
+import com.canerture.common.presentation.theme.ValorantTheme
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
-fun ValorantBackIcon(
+public fun ValorantBackIcon(
     modifier: Modifier = Modifier,
     padding: Dp = 0.dp,
     onBackClick: () -> Unit

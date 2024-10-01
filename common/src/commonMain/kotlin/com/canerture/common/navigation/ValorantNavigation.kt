@@ -32,7 +32,7 @@ import org.koin.compose.koinInject
 private const val DURATION = 1000
 
 @Composable
-fun ValorantNavigation(
+public fun ValorantNavigation(
     navHostController: NavHostController,
 ) {
     val enterAnim = fadeIn(tween(DURATION))

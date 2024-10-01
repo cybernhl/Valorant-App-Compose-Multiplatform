@@ -19,16 +19,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
-import com.canerture.common.presentation.theme.ValorantTheme
-import org.jetbrains.compose.resources.stringResource
 import com.canerture.common.Res
 import com.canerture.common.desc_warning_image
 import com.canerture.common.something_went_wrong
+import com.canerture.common.presentation.theme.ValorantTheme
+import org.jetbrains.compose.resources.stringResource
 
 private const val ASPECT_RATIO = 3 / 2f
 
 @Composable
-fun ValorantErrorScreen(
+public fun ValorantErrorScreen(
     errorText: String?,
     onTryAgainClick: () -> Unit
 ) {

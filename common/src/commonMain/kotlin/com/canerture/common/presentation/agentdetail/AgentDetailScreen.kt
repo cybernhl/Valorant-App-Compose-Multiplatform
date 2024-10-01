@@ -25,7 +25,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.canerture.common.Res
 import com.canerture.common.common.collectWithLifecycle
+import com.canerture.common.title_abilities
+import com.canerture.common.title_description
 import com.canerture.common.domain.model.AbilityUI
 import com.canerture.common.domain.model.AgentUI
 import com.canerture.common.presentation.components.ValorantBackIcon
@@ -38,16 +41,13 @@ import com.canerture.common.presentation.theme.ValorantTheme
 import com.canerture.common.presentation.theme.WindowType
 import kotlinx.coroutines.flow.Flow
 import org.jetbrains.compose.resources.stringResource
-import com.canerture.common.Res
-import com.canerture.common.title_abilities
-import com.canerture.common.title_description
 
 private const val ASPECT_RATIO = 16 / 9f
 private const val ASPECT_RATIO_MOBILE = 3 / 2f
 private const val ASPECT_RATIO_MOBILE_FULL = 1f
 
 @Composable
-fun AgentDetailScreen(
+public fun AgentDetailScreen(
     uiState: AgentDetailContract.UiState,
     uiEffect: Flow<AgentDetailContract.UiEffect>,
     onAction: (AgentDetailContract.UiAction) -> Unit,
@@ -86,7 +86,7 @@ fun AgentDetailScreen(
 }
 
 @Composable
-fun DetailDesktopContent(
+public fun DetailDesktopContent(
     agent: AgentUI,
     onBackClick: () -> Unit
 ) {
@@ -159,7 +159,7 @@ fun DetailDesktopContent(
 }
 
 @Composable
-fun DetailMobileContent(
+public fun DetailMobileContent(
     agent: AgentUI,
     onBackClick: () -> Unit
 ) {
@@ -234,7 +234,7 @@ fun DetailMobileContent(
 }
 
 @Composable
-fun AbilitiesTabLayout(
+public fun AbilitiesTabLayout(
     abilities: List<AbilityUI>,
     agentColor: Color
 ) {

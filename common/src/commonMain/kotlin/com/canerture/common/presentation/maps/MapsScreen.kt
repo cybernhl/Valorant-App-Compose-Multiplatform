@@ -19,7 +19,7 @@ import com.canerture.common.presentation.components.ValorantProgressBar
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun MapsScreen(
+public fun MapsScreen(
     uiState: MapsContract.UiState,
     uiEffect: Flow<MapsContract.UiEffect>,
     onAction: (MapsContract.UiAction) -> Unit,
@@ -53,7 +53,7 @@ fun MapsScreen(
 }
 
 @Composable
-fun MapListContent(
+public fun MapListContent(
     maps: List<MapUI>,
     onMapClick: (String) -> Unit
 ) {

@@ -13,7 +13,7 @@ import coil3.request.crossfade
 private const val DURATION = 500
 
 @Composable
-fun ValorantImage(
+public fun ValorantImage(
     modifier: Modifier = Modifier,
     imageUrl: String,
     contentDescription: String,

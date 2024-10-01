@@ -3,12 +3,13 @@ package com.canerture.common.presentation.theme
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun ValorantTheme(
+public fun ValorantTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
@@ -73,13 +74,13 @@ private val lightColors = ValorantColors(
     cardBackgroundSecondary = LightBlue.copy(0.1f)
 )
 
-object ValorantTheme {
-    val colors: ValorantColors
+public object ValorantTheme {
+    public   val colors: ValorantColors
         @ReadOnlyComposable
         @Composable
         get() = LocalValorantColors.current
 
-    val typography: ValorantTypography
+    public   val typography: ValorantTypography
         @ReadOnlyComposable
         @Composable
         get() = LocalValorantTypography.current
@@ -109,7 +110,7 @@ private val LocalValorantColors = staticCompositionLocalOf {
     )
 }
 
-val LocalValorantTypography = staticCompositionLocalOf { ValorantTypography() }
+public val LocalValorantTypography: ProvidableCompositionLocal<ValorantTypography> = staticCompositionLocalOf { ValorantTypography() }
 
-val LocalWindowType = staticCompositionLocalOf { WindowType.Small }
+public val LocalWindowType: ProvidableCompositionLocal<WindowType> = staticCompositionLocalOf { WindowType.Small }
 

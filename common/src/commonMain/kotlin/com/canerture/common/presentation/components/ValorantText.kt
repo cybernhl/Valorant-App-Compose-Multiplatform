@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 
 @Composable
-fun ValorantText(
+public fun ValorantText(
     modifier: Modifier = Modifier,
     text: String,
     style: TextStyle,

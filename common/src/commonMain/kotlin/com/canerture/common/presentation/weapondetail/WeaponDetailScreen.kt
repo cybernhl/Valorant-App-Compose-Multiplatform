@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import com.canerture.common.Res
 import com.canerture.common.common.collectWithLifecycle
 import com.canerture.common.domain.model.DamageRangeUI
 import com.canerture.common.domain.model.SkinUI
@@ -30,17 +31,16 @@ import com.canerture.common.presentation.components.ValorantProgressBar
 import com.canerture.common.presentation.components.ValorantTabRow
 import com.canerture.common.presentation.components.ValorantText
 import com.canerture.common.presentation.theme.ValorantTheme
-import kotlinx.coroutines.flow.Flow
-import org.jetbrains.compose.resources.stringResource
-import com.canerture.common.Res
 import com.canerture.common.text_body
 import com.canerture.common.text_head
 import com.canerture.common.text_leg
 import com.canerture.common.title_damage_range
 import com.canerture.common.title_skins
+import kotlinx.coroutines.flow.Flow
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
-fun WeaponDetailScreen(
+public fun WeaponDetailScreen(
     uiState: WeaponDetailContract.UiState,
     uiEffect: Flow<WeaponDetailContract.UiEffect>,
     onAction: (WeaponDetailContract.UiAction) -> Unit,
@@ -69,7 +69,7 @@ fun WeaponDetailScreen(
 }
 
 @Composable
-fun DetailContent(
+public fun DetailContent(
     weapon: WeaponUI,
     onBackClick: () -> Unit
 ) {
@@ -147,7 +147,7 @@ fun DetailContent(
 }
 
 @Composable
-fun DamageRangesTabLayout(
+public fun DamageRangesTabLayout(
     damageRanges: List<DamageRangeUI>
 ) {
     val pagerState = rememberPagerState(pageCount = { damageRanges.size })
@@ -183,7 +183,7 @@ fun DamageRangesTabLayout(
 }
 
 @Composable
-fun SkinsTabLayout(
+public fun SkinsTabLayout(
     skins: List<SkinUI>
 ) {
     val pagerState = rememberPagerState(pageCount = { skins.size })

@@ -1,5 +1,28 @@
 package com.canerture.common
 
 import androidx.compose.ui.window.ComposeUIViewController
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.ui.Modifier
+import platform.UIKit.UIViewController
 
-fun MainViewController() = ComposeUIViewController { App() }
+public fun MainViewController(): UIViewController = ComposeUIViewController {
+//    MaterialTheme(
+//        colorScheme = if (isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()
+//    ) {
+//        Surface(
+//            modifier = Modifier.fillMaxSize(),
+//        ) {
+//            Column(
+//                modifier = Modifier.fillMaxSize(),
+//            ) {
+                UIShow()
+//            }
+//        }
+//    }
+}

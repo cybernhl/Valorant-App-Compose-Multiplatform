@@ -1,9 +1,9 @@
 package com.canerture.common.domain.mapper
 
-import com.canerture.common.domain.model.MapUI
 import com.canerture.common.data.model.maps.Map
+import com.canerture.common.domain.model.MapUI
 
-fun List<Map>?.mapToMapUI() = this?.map {
+public fun List<Map>?.mapToMapUI(): List<MapUI> = this?.map {
     MapUI(
         coordinates = it.coordinates.orEmpty(),
         displayIcon = it.displayIcon.orEmpty(),
@@ -15,7 +15,7 @@ fun List<Map>?.mapToMapUI() = this?.map {
     )
 }.orEmpty()
 
-fun Map?.mapToMapUI() = MapUI(
+public fun Map?.mapToMapUI(): MapUI = MapUI(
     coordinates = this?.coordinates.orEmpty(),
     displayIcon = this?.displayIcon.orEmpty(),
     displayName = this?.displayName.orEmpty(),

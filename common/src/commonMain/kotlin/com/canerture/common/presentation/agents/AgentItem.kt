@@ -23,7 +23,7 @@ private const val ASPECT_RATIO = 3 / 5f
 private const val ALPHA = 0.2f
 
 @Composable
-fun AgentItem(
+public fun AgentItem(
     modifier: Modifier = Modifier,
     agent: AgentUI,
     onAgentClick: (String) -> Unit

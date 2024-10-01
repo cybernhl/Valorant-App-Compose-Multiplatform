@@ -10,7 +10,7 @@ import com.canerture.common.presentation.weapondetail.WeaponDetailContract.UiEff
 import com.canerture.common.presentation.weapondetail.WeaponDetailContract.UiState
 import kotlinx.coroutines.launch
 
-class WeaponDetailViewModel(
+public class WeaponDetailViewModel(
     private val getWeaponDetailUseCase: GetWeaponDetailUseCase,
 ) : ViewModel(), MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
 
@@ -22,7 +22,7 @@ class WeaponDetailViewModel(
         }
     }
 
-    fun getWeaponDetail(id: String) {
+    public fun getWeaponDetail(id: String) {
         viewModelScope.launch {
             updateUiState { copy(weapon = null) }
             getWeaponDetailUseCase(id).onSuccess {

@@ -1,6 +1,6 @@
 package com.canerture.common.domain.model
 
-data class TierUI(
+public data class TierUI(
     val backgroundColor: String,
     val color: String,
     val division: String,

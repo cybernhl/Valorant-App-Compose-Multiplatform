@@ -21,7 +21,7 @@ import com.canerture.common.presentation.components.ValorantText
 import com.canerture.common.presentation.theme.ValorantTheme
 
 @Composable
-fun CompetitiveTierItem(
+public fun CompetitiveTierItem(
     tier: TierUI
 ) {
     Card(

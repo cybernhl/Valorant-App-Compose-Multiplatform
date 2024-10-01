@@ -9,7 +9,7 @@ import com.canerture.common.domain.model.AgentGroupUI
 import com.canerture.common.domain.model.AgentUI
 import com.canerture.common.domain.model.RoleUI
 
-fun List<Agent>?.mapToAgentRoleUI(): List<AgentGroupUI> {
+public fun List<Agent>?.mapToAgentRoleUI(): List<AgentGroupUI> {
     val agents = this?.mapToAgentUI().orEmpty()
     return agents.groupBy { it.role.displayName }.map {
         AgentGroupUI(
@@ -20,7 +20,7 @@ fun List<Agent>?.mapToAgentRoleUI(): List<AgentGroupUI> {
     }
 }
 
-fun List<Agent>?.mapToAgentUI() = this?.map { agent ->
+public fun List<Agent>?.mapToAgentUI(): List<AgentUI> = this?.map { agent ->
     AgentUI(
         abilities = agent.abilities.mapToAbilityUI(),
         description = agent.description.orEmpty(),
@@ -33,7 +33,7 @@ fun List<Agent>?.mapToAgentUI() = this?.map { agent ->
     )
 }.orEmpty()
 
-fun Agent?.mapToAgentUI() = AgentUI(
+public fun Agent?.mapToAgentUI(): AgentUI = AgentUI(
     abilities = this?.abilities.mapToAbilityUI(),
     description = this?.description.orEmpty(),
     displayName = this?.displayName.orEmpty().uppercase(),
@@ -44,12 +44,12 @@ fun Agent?.mapToAgentUI() = AgentUI(
     backgroundGradientColors = this?.backgroundGradientColors.orEmpty().take(2).map { colorParse(it) }
 )
 
-fun Role?.mapToRoleUI() = RoleUI(
+public fun Role?.mapToRoleUI(): RoleUI = RoleUI(
     displayIcon = this?.displayIcon.orEmpty(),
     displayName = this?.displayName.orEmpty()
 )
 
-fun List<Ability>?.mapToAbilityUI() = this?.map {
+public fun List<Ability>?.mapToAbilityUI(): List<AbilityUI> = this?.map {
     AbilityUI(
         description = it.description.orEmpty(),
         displayIcon = it.displayIcon.orEmpty(),

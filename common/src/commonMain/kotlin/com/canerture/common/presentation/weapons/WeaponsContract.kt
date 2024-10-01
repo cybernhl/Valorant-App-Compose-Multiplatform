@@ -2,18 +2,18 @@ package com.canerture.common.presentation.weapons
 
 import com.canerture.common.domain.model.WeaponUI
 
-object WeaponsContract {
-    data class UiState(
+public object WeaponsContract {
+    public data class UiState(
         val isLoading: Boolean = false,
         val weapons: List<WeaponUI> = emptyList(),
     )
 
-    sealed class UiAction {
-        data class OnWeaponClick(val id: String) : UiAction()
+    public sealed class UiAction {
+        public data class OnWeaponClick(val id: String) : UiAction()
     }
 
-    sealed class UiEffect {
-        data class GoToWeaponDetail(val id: String) : UiEffect()
-        data class ShowError(val message: String) : UiEffect()
+    public sealed class UiEffect {
+        public data class GoToWeaponDetail(val id: String) : UiEffect()
+        public data class ShowError(val message: String) : UiEffect()
     }
 }

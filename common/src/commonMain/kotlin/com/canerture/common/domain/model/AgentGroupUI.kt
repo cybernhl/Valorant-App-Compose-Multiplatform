@@ -2,13 +2,13 @@ package com.canerture.common.domain.model
 
 import androidx.compose.ui.graphics.Color
 
-data class AgentGroupUI(
+public data class AgentGroupUI(
     val role: String,
     val roleIcon: String,
     val agents: List<AgentUI>
 )
 
-data class AgentUI(
+public data class AgentUI(
     val abilities: List<AbilityUI>,
     val description: String,
     val displayName: String,
@@ -19,13 +19,13 @@ data class AgentUI(
     val backgroundGradientColors: List<Color>,
 )
 
-data class AbilityUI(
+public data class AbilityUI(
     val description: String,
     val displayIcon: String,
     val displayName: String,
 )
 
-data class RoleUI(
+public data class RoleUI(
     val displayIcon: String,
     val displayName: String
 )

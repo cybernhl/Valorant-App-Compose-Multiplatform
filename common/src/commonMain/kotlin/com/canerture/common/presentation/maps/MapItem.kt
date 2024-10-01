@@ -22,7 +22,7 @@ import com.canerture.common.presentation.theme.ValorantTheme
 private const val ASPECT_RATIO = 9 / 16f
 
 @Composable
-fun MapItem(
+public fun MapItem(
     map: MapUI,
     onMapClick: (String) -> Unit
 ) {
