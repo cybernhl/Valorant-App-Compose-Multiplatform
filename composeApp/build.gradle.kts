@@ -3,14 +3,14 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import java.util.Properties
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsCompose)
-    alias(libs.plugins.kotlinxSerialization)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.buildKonfigPlugin)
     alias(libs.plugins.detekt)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -48,7 +48,7 @@ kotlin {
         }
 
         androidMain.dependencies {
-            implementation(libs.compose.ui.tooling.preview)
+            implementation(libs.androidx.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
             implementation(libs.kotlinx.coroutines.android)
@@ -80,12 +80,12 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
 
             implementation(libs.coil)
-            implementation(libs.coilKtor)
-            implementation(libs.coilCompose)
+            implementation(libs.coil.ktor)
+            implementation(libs.coil.compose)
 
             implementation(libs.kotlinx.coroutines.core)
 
-            implementation(libs.jetbrains.androidx.compose.navigation)
+            implementation(libs.jetbrains.androidx.navigation.compose)
         }
 
         iosMain.dependencies {
@@ -94,7 +94,7 @@ kotlin {
 
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
-            implementation(libs.ktor.client.engine)
+            implementation(libs.ktor.client.cio)
             implementation(libs.kotlinx.coroutines.swing)
         }
     }
@@ -136,7 +136,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     dependencies {
-        debugImplementation(libs.compose.ui.tooling)
+        debugImplementation(libs.androidx.compose.ui.tooling)
     }
 }
 
