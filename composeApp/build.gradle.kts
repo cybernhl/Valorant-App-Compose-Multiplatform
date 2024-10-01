@@ -85,7 +85,7 @@ kotlin {
 
             implementation(libs.kotlinx.coroutines.core)
 
-            implementation(libs.compose.navigation)
+            implementation(libs.jetbrains.androidx.compose.navigation)
         }
 
         iosMain.dependencies {
